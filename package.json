@@ -1,0 +1,22 @@
+{
+  "name": "air_conditioner_controller_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JIIOryo/air_conditioner_api.git"
+  },
+  "author": "JIIOryo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JIIOryo/air_conditioner_api/issues"
+  },
+  "homepage": "https://github.com/JIIOryo/air_conditioner_api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
