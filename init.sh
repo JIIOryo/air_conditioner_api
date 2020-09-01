@@ -6,6 +6,9 @@
 # # install python package using pip3
 # pip3 install -r requirements.txt
 
+# install npm
+sudo apt install -y npm
+
 # install nvm
 sudo mkdir /usr/local/nvm
 sudo chmod 777 /usr/local/nvm
