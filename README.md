@@ -10,6 +10,7 @@ air_conditioner_apiは、エアコンを操作するためのAPIサーバです�
 detail
 </summary>
 
+
 #### Schema
 
 ```json
@@ -243,4 +244,29 @@ None
 </details>
 
 
+## GET:/
 
+<details>
+<summary>
+detail
+</summary>
+
+
+This endpoint returns index.html with the minimally configured controller implemented.
+    
+#### Schema
+
+```json
+None
+```
+
+#### Content-Type
+
+`text/html; charset=utf-8`
+
+#### Page
+
+<img src="https://github.com/JIIOryo/air_conditioner_api/blob/assets/assets/img/html.png?raw=true" width="500px">
+
+
+</details>
