@@ -39,6 +39,8 @@ python3 server.py
 
 ```
 
+You need to connect the infrared LED to the GPIO set in config.json.
+
 # Endpoints
 
 ## PUT:/on/cool
