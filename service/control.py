@@ -55,6 +55,22 @@ def dehumidify_control(dehumidification_level: int, airflow_level: str) -> None:
         command = f'{dehumidification_level_cmd}:{airflow_level}',
     )
 
+def off_control() -> None:
+    config = get_config()
+    project_root_path = config['project_root_path'].rstrip('/')
+    
+    run_air_conditioner(
+        irrppy_path = '/'.join([project_root_path, 'irrp.py']),
+        command_file_path = '/'.join([
+            project_root_path,
+            'signal',
+            config['product_name'],
+            'other.json'
+        ]),
+        gpio = config['ir_led_gpio_bcm'],
+        command = 'off',
+    )
+
 # private functions
 
 def _airflow_level_validation(airflow_level: str):
