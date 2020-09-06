@@ -47,6 +47,7 @@ python3 server.py
 detail
 </summary>
 
+### Request
 
 #### Schema
 
@@ -95,6 +96,35 @@ detail
 }
 ```
 
+
+### Response
+
+
+#### Content-Type
+
+`application/json`
+
+#### Success example
+
+```
+{
+  "code": 200,
+  "message": "ok"
+}
+```
+
+#### Error example
+
+```
+{
+  "code": 400,
+  "error": "ValidationError",
+  "message": "Validation error ..."
+}
+````
+
+
+
 </details>
 
 <!-- ------------------------------------------------------------------------------------ -->
@@ -104,6 +134,8 @@ detail
 <summary>
 detail
 </summary>
+
+### Request
 
 #### Schema
 
@@ -157,6 +189,32 @@ detail
 }
 ```
 
+### Response
+
+
+#### Content-Type
+
+`application/json`
+
+#### Success example
+
+```
+{
+  "code": 200,
+  "message": "ok"
+}
+```
+
+#### Error example
+
+```
+{
+  "code": 400,
+  "error": "ValidationError",
+  "message": "Validation error ..."
+}
+````
+
 </details>
 
 
@@ -168,6 +226,8 @@ detail
 <summary>
 detail
 </summary>
+
+### Request
 
 #### Schema
 
@@ -221,6 +281,32 @@ detail
 }
 ```
 
+### Response
+
+
+#### Content-Type
+
+`application/json`
+
+#### Success example
+
+```
+{
+  "code": 200,
+  "message": "ok"
+}
+```
+
+#### Error example
+
+```
+{
+  "code": 400,
+  "error": "ValidationError",
+  "message": "Validation error ..."
+}
+````
+
 </details>
 
 
@@ -232,6 +318,8 @@ detail
 <summary>
 detail
 </summary>
+
+### Request
 
 #### Schema
 
@@ -248,6 +336,23 @@ None
 ```json
 None
 ```
+
+### Response
+
+
+#### Content-Type
+
+`application/json`
+
+#### Success example
+
+```
+{
+  "code": 200,
+  "message": "ok"
+}
+```
+
 
 </details>
 
@@ -262,6 +367,8 @@ None
 detail
 </summary>
 
+### Request
+
 #### Schema
 
 ```json
@@ -277,6 +384,23 @@ None
 ```json
 None
 ```
+
+### Response
+
+
+#### Content-Type
+
+`application/json`
+
+#### Success example
+
+```
+{
+  "code": 200,
+  "message": "ok"
+}
+```
+
 
 </details>
 
