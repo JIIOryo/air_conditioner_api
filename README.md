@@ -1,20 +1,16 @@
-## air_conditioner_api
+# air_conditioner_api
 
 air_conditioner_apiは、エアコンを操作するためのAPIサーバです。
 
-## Endpoints
+# Endpoints
 
-### Turn on
+## PUT:/on/cool
+<details>
+<summary>
+detail
+</summary>
 
-##### Path
-
-`/on/cool`
-
-##### Method
-
-`PUT`
-
-##### Schema
+#### Schema
 
 ```json
 {
@@ -47,11 +43,11 @@ air_conditioner_apiは、エアコンを操作するためのAPIサーバです�
 }
 ```
 
-##### Content-Type
+#### Content-Type
 
 `application/json`
 
-##### Example
+#### Example
 
 ```json
 {
@@ -59,4 +55,8 @@ air_conditioner_apiは、エアコンを操作するためのAPIサーバです�
     "airflowLevel": "1"
 }
 ```
+
+</details>
+
+
 
