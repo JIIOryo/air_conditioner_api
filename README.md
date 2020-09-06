@@ -186,4 +186,61 @@ detail
 </details>
 
 
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+## DELETE:/off
+<details>
+<summary>
+detail
+</summary>
+
+#### Schema
+
+```json
+None
+```
+
+#### Content-Type
+
+`application/json`
+
+#### Examples
+
+```json
+None
+```
+
+</details>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+## GET:/ping
+
+<details>
+<summary>
+detail
+</summary>
+
+#### Schema
+
+```json
+None
+```
+
+#### Content-Type
+
+`application/json`
+
+#### Examples
+
+```json
+None
+```
+
+</details>
+
+
 
