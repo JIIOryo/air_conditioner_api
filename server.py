@@ -7,7 +7,7 @@ from flask_jsonschema_validator import JSONSchemaValidator
 import controller.cool as cool_controller
 import controller.hot as hot_controller
 import controller.dehumidify as dehumidify_controller
-# import controller.off as off_controller
+import controller.off as off_controller
 
 app = Flask(__name__)
 JSONSchemaValidator(
@@ -58,6 +58,12 @@ def hot_():
 @app.validate('controller', 'dehumidify')
 def dehumidify_():
     try: dehumidify_controller.dehumidify(request.json)
+    except Exception as e: return error_response(e)
+    return jsonify(ok), 200
+
+@app.route('/off', methods=['DELETE'])
+def off():
+    try: off_controller.off()
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
 
