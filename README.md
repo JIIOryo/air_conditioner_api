@@ -125,5 +125,65 @@ detail
 <!-- ------------------------------------------------------------------------------------ -->
 
 
+## PUT:/on/dehumidify
+<details>
+<summary>
+detail
+</summary>
+
+#### Schema
+
+```json
+{
+    "dehumidify": {
+        "type": "object",
+        "properties": {
+            "dehumidificationLevel": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 3,
+                "description": "Level of dehumidification by air conditioner. 1: low, 2: middle, 3: high"
+            },
+            "airflowLevel": {
+                "type": "string",
+                "enum": [
+                    "a",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "description": "Level of airflow from air conditioner. a: auto, 1: low, 2: middle, 3: high"
+            }
+        },
+        "required": [
+            "dehumidificationLevel",
+            "airflowLevel"
+        ]
+    }
+}
+```
+
+#### Content-Type
+
+`application/json`
+
+#### Examples
+
+```json
+{
+    "dehumidificationLevel": 1,
+    "airflowLevel": "2"
+}
+```
+
+```json
+{
+    "dehumidificationLevel": 3,
+    "airflowLevel": "a"
+}
+```
+
+</details>
+
 
 
