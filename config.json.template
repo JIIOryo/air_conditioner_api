@@ -1,0 +1,5 @@
+{
+    "product_name": "msz-gv-2219-w",
+    "project_root_path": "/home/pi/air_conditioner_api",
+    "ir_led_gpio_bcm": 4
+}
