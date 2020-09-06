@@ -1,0 +1,90 @@
+{
+    "cool": {
+        "type": "object",
+        "properties": {
+            "temperature": {
+                "type": "number",
+                "minimum": 16,
+                "maximum": 31,
+                "description": "Degree celsius of airflow from air conditioner."
+            },
+            "airflowLevel": {
+                "type": "string",
+                "enum": ["a", "1", "2", "3"],
+                "description": "Level of airflow from air conditioner. a: auto, 1: low, 2: middle, 3: high"
+            }
+        },
+        "required": [
+            "temperature",
+            "airflowLevel"
+        ],
+        "examples": [
+            {
+                "temperature": 26,
+                "airflowLevel": "1"
+            }
+        ]
+    },
+    "hot": {
+        "type": "object",
+        "properties": {
+            "temperature": {
+                "type": "number",
+                "minimum": 16,
+                "maximum": 31,
+                "description": "Degree celsius of airflow from air conditioner."
+            },
+            "airflowLevel": {
+                "type": "string",
+                "enum": [
+                    "a",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "description": "Level of airflow from air conditioner. a: auto, 1: low, 2: middle, 3: high"
+            }
+        },
+        "required": [
+            "temperature",
+            "airflowLevel"
+        ],
+        "examples": [
+            {
+                "temperature": 26,
+                "airflowLevel": "1"
+            }
+        ]
+    },
+    "dehumidify": {
+        "type": "object",
+        "properties": {
+            "dehumidificationLevel": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 3,
+                "description": "Level of dehumidification by air conditioner. 1: low, 2: middle, 3: high"
+            },
+            "airflowLevel": {
+                "type": "string",
+                "enum": [
+                    "a",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "description": "Level of airflow from air conditioner. a: auto, 1: low, 2: middle, 3: high"
+            }
+        },
+        "required": [
+            "dehumidificationLevel",
+            "airflowLevel"
+        ],
+        "examples": [
+            {
+                "dehumidificationLevel": 1,
+                "airflowLevel": "2"
+            }
+        ]
+    }
+}
