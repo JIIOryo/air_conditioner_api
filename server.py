@@ -42,21 +42,21 @@ def ping(): return jsonify(ok), 200
 
 @app.route('/on/cool', methods=['PUT'])
 @app.validate('controller', 'cool')
-def cool_():
+def cool():
     try: cool_controller.cool(request.json)
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
 
 @app.route('/on/hot', methods=['PUT'])
 @app.validate('controller', 'hot')
-def hot_():
+def hot():
     try: hot_controller.hot(request.json)
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
 
 @app.route('/on/dehumidify', methods=['PUT'])
 @app.validate('controller', 'dehumidify')
-def dehumidify_():
+def dehumidify():
     try: dehumidify_controller.dehumidify(request.json)
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
