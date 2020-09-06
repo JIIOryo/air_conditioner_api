@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+      <meta charset="utf-8">
+      <title>エアコン制御</title>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <table class="main-table">
+        <tr>
+          <td>
+            タイプ
+          </td>
+          <td>
+            <select name="type" id="type">
+              <option value="cool" selected>冷房</option>
+              <option value="hot">暖房</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            温度
+          </td>
+          <td>
+            <select name="temperature" id="temperature">
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26" selected>26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            風速
+          </td>
+          <td>
+            <select name="airflow_level" id="airflow_level">
+              <option value="a">自動</option>
+              <option value="1" selected>弱</option>
+              <option value="2">中</option>
+              <option value="3">強</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <button onclick="on();">OK</button><br><br>
+      <button onclick="off();">停止</button>
+    </div>
+    <script>
+      async function on() {
+        const type = document.getElementById('type').value;
+        const temperature = document.getElementById('temperature').value;
+        const airflow_level = document.getElementById('airflow_level').value;
+        const req = {
+          temperature: Number(temperature),
+          airflowLevel: airflow_level,
+        };
+        const res = await axios.put(`/on/${type}`, req);
+        console.log(res.data);
+      }
+      async function off() {
+        const res = await axios.delete('/off');
+        console.log(res.data);
+      }
+
+    </script>
+    <style>
+      .main {
+        margin: auto;
+        margin-top: 100px;
+        padding-top: 20px;
+        text-align: center;
+        background-color: #EEE;
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+      }
+      .main-table {
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    </style>
+  </body>
+</html>

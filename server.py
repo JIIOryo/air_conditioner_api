@@ -37,6 +37,12 @@ def onValidationError(e):
     }
     return jsonify(res), 400
 
+@app.route('/')
+def index():
+    with open('./public/index.html') as f:
+        html = f.read()
+    return html
+
 @app.route('/ping')
 def ping(): return jsonify(ok), 200
 
