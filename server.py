@@ -7,7 +7,7 @@ from flask_jsonschema_validator import JSONSchemaValidator
 import controller.cool as cool_controller
 import controller.hot as hot_controller
 import controller.dehumidify as dehumidify_controller
-# import controller.off as off_controller
+import controller.off as off_controller
 
 app = Flask(__name__)
 JSONSchemaValidator(
@@ -42,22 +42,28 @@ def ping(): return jsonify(ok), 200
 
 @app.route('/on/cool', methods=['PUT'])
 @app.validate('controller', 'cool')
-def cool_():
+def cool():
     try: cool_controller.cool(request.json)
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
 
 @app.route('/on/hot', methods=['PUT'])
 @app.validate('controller', 'hot')
-def hot_():
+def hot():
     try: hot_controller.hot(request.json)
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
 
 @app.route('/on/dehumidify', methods=['PUT'])
 @app.validate('controller', 'dehumidify')
-def dehumidify_():
+def dehumidify():
     try: dehumidify_controller.dehumidify(request.json)
+    except Exception as e: return error_response(e)
+    return jsonify(ok), 200
+
+@app.route('/off', methods=['DELETE'])
+def off():
+    try: off_controller.off()
     except Exception as e: return error_response(e)
     return jsonify(ok), 200
 
