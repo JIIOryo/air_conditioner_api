@@ -1,6 +1,43 @@
 # air_conditioner_api
 
-air_conditioner_apiは、エアコンを操作するためのAPIサーバです。
+This is an API server with minimal functionality to control the air conditioner and is the wrapper for irrp.py which is part of the pigpio project.
+
+# Environment
+
+```
+Raspberry Pi 3 model B
+Python 3.7.3
+```
+
+# Setup
+
+```sh
+
+git clone https://github.com/JIIOryo/air_conditioner_api.git
+
+cd air_conditioner_api
+
+# install pigpio for python3
+sudo apt install python3-pigpio -y
+
+# pigpiod start
+sudo systemctl enable pigpiod
+sudo systemctl start pigpiod
+
+# download irrp.py to project root path
+curl http://abyz.me.uk/rpi/pigpio/code/irrp_py.zip | zcat > irrp.py
+
+# pip install
+pip3 install -r requirements.txt
+
+# generate config file
+cp config.json.template config.json
+
+# run
+python3 server.py
+
+
+```
 
 # Endpoints
 
